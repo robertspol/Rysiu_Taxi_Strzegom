@@ -1,0 +1,25 @@
+$transition: .4s;
+$underline-height: .35vh;
+
+@mixin translation-and-nav {
+    color: #fb9403;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    @include mq(xxsmall-landscape) {
+        font-size: 1.5rem;
+    }
+}
+
+@mixin underline {
+    width: 100%;
+    height: $underline-height;
+    transform: translateX(-110%);
+    background-color: #fb9403;
+    transition: .25s;
+}
+
+@font-face {
+    font-family: header;
+    src: url("../fonts/GrechenFuemen-Regular.ttf");
+}

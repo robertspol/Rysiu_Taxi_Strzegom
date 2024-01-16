@@ -1,0 +1,39 @@
+.section--about {
+    margin-top: 1vh;
+    border-top: .3vh solid #fff;
+}
+
+.section__img-and-text--about {
+    @include mq(xxsmall-landscape) {
+        justify-content: space-between;
+    }
+
+    .section__img-wrapper--about {
+        @include mq(xxsmall-landscape) {
+            align-self: center;
+            flex-basis: 25vw;
+            height: 40vw;
+        }
+
+        @include mq(xxxlarge-landscape) {
+            flex-basis: 20vw;
+        }
+    }
+
+    .section__text--about {
+        transform: translateX(120vw);
+        text-align: justify;
+
+        @include mq(xxsmall-landscape) {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-basis: 65%;
+        }
+
+        .section__paragraph2,
+        .section__paragraph3 {
+            margin-top: 2vh;
+        }
+    }
+}

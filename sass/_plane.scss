@@ -1,0 +1,26 @@
+.section__img-and-text--plane {
+    @include mq(xxsmall-landscape) {
+        justify-content: space-evenly;
+    }
+
+    .section__img-wrapper--plane {
+        @include mq(xxsmall-landscape) {
+            flex-basis: 40vw;
+            height: 30w;
+        }
+    }
+
+    .section__text--plane {
+        transform: translateX(120vw);
+        text-align: center;
+
+        @include mq(xxsmall-landscape) {
+            display: flex;
+            align-items: center;
+        }
+
+        @include mq(xxsmall-landscape) {
+            flex-basis: 30%;
+        }
+    }
+}

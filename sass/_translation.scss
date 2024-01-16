@@ -1,0 +1,24 @@
+.translation-wrapper {
+    display: flex;
+    justify-content: right;
+    margin-top: 2vh;
+
+    &__translation-and-underline {
+        overflow-x: hidden;
+        text-align: right;
+
+        .translation-wrapper__translation {
+            @include translation-and-nav;
+        }
+
+        .translation-wrapper__underline {
+            @include underline;
+        }
+
+        @media (hover: hover) {
+            .translation-wrapper__translation:hover+.translation-wrapper__underline {
+                transform: translateX(0);
+            }
+        }
+    }
+}

@@ -1,0 +1,55 @@
+.sticky-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 1vh 1vh;
+
+    &__sticky {
+        display: flex;
+        color: #0f0;
+        font-size: 1.5rem;
+        font-weight: bold;
+        transition: .1s;
+        cursor: pointer;
+
+        @include mq(xxsmall) {
+            font-size: 1.5rem;
+        }
+
+        @include mq(xxsmall-landscape) {
+            font-size: 3rem;
+        }
+
+        .sticky-wrapper__phone-icon-wrapper {
+            span {
+                margin-right: 1vw;
+                padding: 1vh;
+                border: 3px solid #0f0;
+                border-radius: 35%;
+
+                @include mq(xxsmall-landscape) {
+                    padding: 1.5vh;
+                }
+            }
+        }
+
+        .sticky-wrapper__number {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    @media (hover: hover) {
+        &__sticky:hover {
+            text-shadow: 0 0 20px #0f0, 0 0 20px #0f0;
+        }
+    }
+}
+
+.sticky-wrapper--active {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: #000;
+    z-index: 10;
+}

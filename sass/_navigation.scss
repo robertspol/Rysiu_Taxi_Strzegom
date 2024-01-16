@@ -1,0 +1,24 @@
+.nav-wrapper {
+    display: flex;
+    justify-content: right;
+    margin: 2-$underline-height auto 1vh;
+
+    &__nav-and-underline {
+        overflow-x: hidden;
+        text-align: right;
+
+        .nav-wrapper__nav {
+            @include translation-and-nav;
+        }
+
+        .nav-wrapper__underline {
+            @include underline;
+        }
+
+        @media (hover: hover) {
+            .nav-wrapper__nav:hover+.nav-wrapper__underline {
+                transform: translateX(0);
+            }
+        }
+    }
+}
